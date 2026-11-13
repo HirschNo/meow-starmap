@@ -1,0 +1,6 @@
+# meow-memory-starmap bundle patch：作为一条 loader entry 插入 profile。
+# 该行以包名引用，Node 解析到本目录；host 半 = lib/index.js（cordis 插件），
+# dsh.client 声明让 web app 加载 lib/client.js 作为浏览器半。
+- insert:
+    - id: memory-starmap
+      name: meow-memory-starmap

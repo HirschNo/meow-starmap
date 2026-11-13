@@ -1,0 +1,76 @@
+{
+  "name": "meow-memory-starmap",
+  "version": "0.1.0",
+  "description": "Star-map panel for the meow-memory store inside DeepSeek Harness: memory entries as glowing stars around project galaxies, with keyword-co-occurrence edges, meteor trails and level-of-detail fading. Read-only.",
+  "type": "module",
+  "main": "./lib/index.js",
+  "exports": {
+    ".": "./lib/index.js",
+    "./client": "./lib/client.js",
+    "./cordis.patch.yml": "./cordis.patch.yml",
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "lib",
+    "cordis.patch.yml",
+    "assets",
+    "README.md",
+    "README.zh.md",
+    "LICENSE"
+  ],
+  "license": "MIT",
+  "author": "HirschNo",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/HirschNo/meow-starmap.git"
+  },
+  "homepage": "https://github.com/HirschNo/meow-starmap#readme",
+  "bugs": {
+    "url": "https://github.com/HirschNo/meow-starmap/issues"
+  },
+  "keywords": [
+    "dsh",
+    "dsh-plugin",
+    "deepseek-harness",
+    "meow-memory",
+    "memory",
+    "visualization",
+    "starmap",
+    "graph",
+    "sqlite"
+  ],
+  "engines": {
+    "node": ">=22.5.0",
+    "dsh": ">=0.2.0-rc.1"
+  },
+  "peerDependencies": {
+    "@deepseek-ai/dsh-api-remotes": ">=0.2.0-rc.2 || >=0.2.1-rc.2 || >=0.2.2-rc.1",
+    "@deepseek-ai/dsh-client-connection": ">=0.2.0-rc.2 || >=0.2.1-rc.2 || >=0.2.2-rc.1",
+    "@deepseek-ai/dsh-client-locale": ">=0.2.0-rc.2 || >=0.2.1-rc.2 || >=0.2.2-rc.1",
+    "@deepseek-ai/dsh-client-ui-conversation": ">=0.2.0-rc.2 || >=0.2.1-rc.2 || >=0.2.2-rc.1",
+    "@deepseek-ai/dsh-client-ui-settings": ">=0.2.0-rc.2 || >=0.2.1-rc.2 || >=0.2.2-rc.1",
+    "@deepseek-ai/dsh-client-ui-sidebar-right": ">=0.2.0-rc.2 || >=0.2.1-rc.2 || >=0.2.2-rc.1"
+  },
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    },
+    "client": {
+      "inject": [
+        "@deepseek-ai/dsh-api-gateway",
+        "@deepseek-ai/dsh-api-remotes",
+        "@deepseek-ai/dsh-client-connection",
+        "@deepseek-ai/dsh-client-locale",
+        "@deepseek-ai/dsh-client-ui-conversation",
+        "@deepseek-ai/dsh-client-ui-settings",
+        "@deepseek-ai/dsh-client-ui-sidebar-right"
+      ],
+      "platform": "web"
+    },
+    "compatibility": {
+      "dshReleases": {
+        "0.2.2-rc.1+": "compatible"
+      }
+    }
+  }
+}
