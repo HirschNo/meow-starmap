@@ -6,6 +6,10 @@ Read-only. It opens the SQLite store with `node:sqlite` in read-only mode and ne
 
 ![icon](assets/icon-180.png)
 
+![memory star map](assets/starmap.png)
+
+A workspace's memory store as a star map: each project is a galaxy with a yellow core, every memory entry is a glowing star, and the edges are project membership and shared keywords.
+
 ## What you see
 
 | Element | Meaning |
